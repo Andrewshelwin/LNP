@@ -1,0 +1,540 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  
+  background-size: cover; /* Ensures the image covers the entire header area */
+  background-position: center center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image repetition */
+  background: url('img/13.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 250px 0;
+  position: relative;
+}
+/* Header Styles */
+
+
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Title Animation */
+.site-title {
+  font-size: 3rem;
+  color: rgb(255, 255, 255); /* Title color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+  animation: fadeIn 2s ease-out, bounce 1s ease-in-out infinite alternate;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Keyframes for Title Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 2px solid white;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+/* Hover effect on links */
+.nav-links a:hover {
+  background-color: white;
+  color: rgb(187, 50, 50);
+  transform: scale(1.1);
+  border-color: rgb(145, 36, 36);
+}
+
+/* Underline animation on hover */
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background-color: rgb(143, 42, 42);
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+/* Keyframes for nav hover */
+@keyframes fadeInLinks {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Make sure the nav links appear with animation */
+.nav-links li {
+  animation: fadeInLinks 2s ease-out;
+}
+
+/* Media Queries to Adjust for Mobile */
+@media (max-width: 768px) {
+  .site-title {
+      font-size: 2.5rem;
+  }
+
+  .nav-links a {
+      font-size: 1rem;
+      padding: 8px 15px;
+  }
+}
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown link */
+.dropdown-toggle {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid white;
+  transition: all 0.4s ease;
+}
+
+/* Dropdown menu (hidden by default) */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+ /*background-color: #646060;*/
+  min-width: 160px;
+  /*border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;*/
+}
+
+/* Dropdown links*/ 
+.dropdown-menu a {
+  color: rgb(203, 190, 190);
+  text-decoration: none;
+  padding: 12px 0px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+/* Hover effect for dropdown links 
+.dropdown-menu a:hover {
+  background-color: #5b4f4f00;
+}*/
+
+/* Display the dropdown menu when hovering over the Products link*/ 
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Optional: Change Products link appearance on hover 
+.dropdown-toggle:hover {
+  background-color: #444;
+}*/
+
+
+
+/* Content Section */
+/* About Us Section */
+.content-section {
+  padding: 60px;
+  text-align: center;
+}
+
+/* Image Gallery Styling */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.gallery-item {
+  flex-basis: calc(25% - 20px); /* Set width for each image with spacing */
+  margin: 10px;
+  overflow: hidden; /* Hide overflow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Animation */
+.gallery-item:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1); /* Zoom image on hover */
+}
+
+/* Adding keyframe animations for smoother loading */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-item {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+
+.service-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.service {
+  background: #f9f9f9;
+  padding: 20px;
+  width: 30%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service:hover {
+  transform: scale(1.05);
+}
+
+/* Service content styles */
+.content-section {
+  padding: 60px;
+  text-align: center;
+}
+
+/* Table styles */
+/* Table Section Styling */
+.content-section {
+  padding: 60px;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Table Container */
+.table-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow-x: auto;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.377);
+}
+
+/* Styled Table */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.styled-table thead tr {
+  background-color: #468bba;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.03rem;
+}
+
+.styled-table th, .styled-table td {
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.styled-table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+/* Hover Animation for Rows */
+.styled-table tbody tr:hover {
+  background-color: #e0f7fa;
+  transform: scale(1.01);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Cell Animation */
+.styled-table td {
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Table Cells */
+.styled-table td:hover {
+  background-color: #d1e7dd;
+}
+
+/* Responsive Table for Small Screens */
+@media (max-width: 768px) {
+  .styled-table thead {
+    display: none; /* Hide the header on small screens */
+  }
+
+  .styled-table, .styled-table tbody, .styled-table tr, .styled-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .styled-table tr {
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .styled-table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .styled-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+}
+/* Container to center the button */
+.connect-btn-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Stylish Button */
+.connect-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #ff4500; /* Bright orange-red button */
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect for the button */
+.connect-btn:hover {
+  background-color: #ff6347; /* Lighter orange-red on hover */
+  transform: scale(1.05); /* Button grows slightly */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Button animation effect */
+.connect-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.connect-btn:hover::before {
+  width: 0;
+  height: 0;
+}
+
+
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contact-section form input,
+.contact-section form textarea {
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+.contact-section form button {
+  padding: 15px;
+  background: #222;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-section form button:hover {
+  background: #555;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #0b1114;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* Stack the contact info and social section */
+    align-items: center; /* Center everything */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Contact Info Section */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centering the Contact Us section */
+}
+
+.contact-info h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column; /* Stack contact details vertically */
+    align-items: center; /* Center align contact details */
+}
+
+.contact-details p {
+    margin: 5px 0; /* Add margin for spacing */
+    font-size: 1rem;
+    text-align: center; /* Center text in contact details */
+}
+
+.contact-details a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  border-top: 1px solid #555; /* Adds a subtle line above the Rights Reserved section */
+  padding-top: 10px;
+}
+
+/* Footer Social Section */
+.footer-social {
+    margin-top: 20px; /* Add spacing above social section */
+    text-align: center; /* Center the Follow Us section */
+}
+
+.footer-social h3 {
+    margin-bottom: 10px; /* Add spacing below heading */
+    font-size: 1.5rem;
+}
+
+.footer-social ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-social ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-social ul li img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social ul li img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-details {
+        align-items: center;
+        margin-top: 20px;
+    }
+}
+
+
+

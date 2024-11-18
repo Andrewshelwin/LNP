@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lakshmi Nano  Pozzo</title>
+  <link rel="icon" href="img/12.png" type="image/png"> 
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script>
+    // Array of image URLs
+    const images = [
+      'img/14.jpg', // Image 1
+      'img/15.jpg', // Image 2
+      'img/16.jpg',
+      'img/13.jpg', // Image 3
+      // Add more image paths as needed
+    ];
+  
+    let currentIndex = 0; // Index to keep track of the current image
+  
+    function changeHeaderImage() {
+      const header = document.querySelector('header'); // Target the header element
+      header.style.backgroundImage = `url('${images[currentIndex]}')`; // Change background image
+      currentIndex = (currentIndex + 1) % images.length; // Increment index and loop back to 0 when reaching the end
+    }
+  
+    // Change image every 2 seconds
+    setInterval(changeHeaderImage, 4000);
+  </script>
+  
+
+</head>
+<body>
+  <!-- Header with cover photo -->
+  <header>
+    <div class="header-container">
+        <h1 class="site-title">Lakshmi Nano Pozzo</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><div class="dropdown">
+                    <a href="products.html" class="navbar">Products</a>
+                    <div class="dropdown-menu">
+                      <a href="products.html">Nano pozzo r40</a>
+                      <a href="product2.html">Nano pozzo r34</a>
+                      <a href="product3.html">Nano pozzo r55</a>
+                      <!-- Add more products as needed -->
+                    </div>
+                  </div></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfkgc_v73finn3k7W4wKgmluXLDnTkM3LBUrLB5kgqb8P2f0g/viewform?usp=sf_link">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<section id="about" class="content-section">
+    <h2>Home</h2>
+    <p><strong>What Is Fly Ash?</strong></p>
+    <p>Fly ash is a fine residue produced from the combustion of pulverized coal, widely used as a supplementary material in concrete. 
+        Its inclusion enhances the durability and workability of concrete, making it a preferred choice in construction.
+         By replacing a portion of cement, fly ash reduces the heat of hydration, lowering the risk of cracking in large structures. 
+         Additionally, it minimizes concrete's permeability, offering greater resistance to chemical attacks and environmental impacts. 
+         Fly ash contributes to sustainability by recycling industrial waste and reducing greenhouse gas emissions associated with cement production, aligning with eco-friendly construction practices.</p><br><br>
+         
+         <fieldset>
+         <legend><strong>Quality</strong></legend>
+         <p>Quality is fundamental to our business because we deeply value our customers. Our objective is to provide products and services that consistently meet and exceed their expectations. To achieve this, we are committed to continuous improvement, supported by a robust Quality Management System. This system offers a clear framework for assessing and enhancing our performance, ensuring that quality remains at the core of everything we do.
+
+            We have implemented various systems and procedures to achieve total customer satisfaction and drive ongoing improvement across our organization. These include regular collection and monitoring of customer feedback to understand and address their needs effectively, as well as a well-defined customer complaints procedure to resolve issues promptly.
+            
+            Our supplier selection and performance evaluation processes are guided by strict criteria, ensuring that we partner only with those who share our commitment to quality. Additionally, we invest in the training and development of our employees to enhance their skills and capabilities.
+            
+            We regularly audit our internal processes, set measurable quality objectives that align with our business goals, and conduct management reviews of audit outcomes, customer feedback, and complaints. These practices collectively reinforce our dedication to delivering exceptional quality and achieving excellence in all aspects of our business.</p></fieldset>
+</section>
+
+<footer>
+    <div class="footer-container">
+       
+        <div class="contact-info">
+          <section id="contact">
+             <!--<h3>Contact Us</h3>-->
+            <div class="contact-details">
+                <p><strong>Factory Address:</strong><a href="https://maps.app.goo.gl/CDBoESpKuCT7tmSR8"> 1285/1B2B2 , mudivaithanenthal village, vakaikulam, Tuticorin - 628102. Tamilnadu , India.</a></p>                
+                <p><strong>Phone:</strong> +91 9677397424</p>
+                <p><strong>Website:</strong> www.lakshminanopozzo.co.in</p>
+                <p><strong>Email:</strong> <a href="mailto:nanotechashindustries@gmail.com">nanotechashindustries@gmail.com</a></p>
+                <p><strong>GST:</strong> 33BTQPA0760H1ZX</p>
+            </div>
+          </section>
+        </div>
+       <!--- <div class="footer-social">
+          <h3>Follow Us</h3>
+          <ul>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+      </div>-->
+      
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Lakshmi Agency. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
